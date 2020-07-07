@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>EmployeeManagement</display-name>
+	<context-param>
+		<description>Location to store uploaded file</description>
+		<param-name>file-upload</param-name>
+		<param-value>
+         D:\eclipse-workspace\EmployeeManagement\uploads
+      </param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>ProgressServlet</servlet-name>
+		<servlet-class>com.immi.ProgressServlet</servlet-class>
+		<async-supported>false</async-supported>
+	</servlet>
+	<servlet>
+		<servlet-name>ProgressAsyncServlet</servlet-name>
+		<servlet-class>com.immi.ProgressAsyncServlet</servlet-class>
+		<async-supported>true</async-supported>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProgressServlet</servlet-name>
+		<url-pattern>/progressServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProgressAsyncServlet</servlet-name>
+		<url-pattern>/progressAsyncServlet</url-pattern>
+	</servlet-mapping>
+</web-app>

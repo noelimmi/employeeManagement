@@ -11,22 +11,4 @@
          D:\eclipse-workspace\EmployeeManagement\uploads
       </param-value>
 	</context-param>
-	<servlet>
-		<servlet-name>ProgressServlet</servlet-name>
-		<servlet-class>com.immi.ProgressServlet</servlet-class>
-		<async-supported>false</async-supported>
-	</servlet>
-	<servlet>
-		<servlet-name>ProgressAsyncServlet</servlet-name>
-		<servlet-class>com.immi.ProgressAsyncServlet</servlet-class>
-		<async-supported>true</async-supported>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ProgressServlet</servlet-name>
-		<url-pattern>/progressServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ProgressAsyncServlet</servlet-name>
-		<url-pattern>/progressAsyncServlet</url-pattern>
-	</servlet-mapping>
 </web-app>
